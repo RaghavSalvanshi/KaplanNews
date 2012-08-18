@@ -1,0 +1,53 @@
+$(function () {
+
+	var isRetinaDevice = window.devicePixelRatio != undefined && window.devicePixelRatio >= 1.5;
+
+	$("body").delegate(".retina", "retina", function () {
+
+		var el = $(this);
+
+		if (isRetinaDevice) {
+			el.attr("src", el.attr("data-2x-url"));
+		}
+
+		el.removeClass("retina");
+	});
+
+	$(".retina").trigger("retina");
+});
+
+$(function () {
+
+	var isRetinaDevice = window.devicePixelRatio != undefined && window.devicePixelRatio >= 1.5;
+
+	$("body").delegate(".lazy-load", "lazy-load", function () {
+
+		var el = $(this);
+		var newEl = $("<img/>");
+
+		copyAttributes(el, newEl);
+
+		if (isRetinaDevice) {
+			newEl.attr("src", newEl.attr("data-2x-url"));
+		} else {
+			newEl.attr("src", newEl.attr("data-src"));
+		}
+
+		newEl.attr("alt", newEl.attr("data-alt")).removeClass("lazy-load");
+
+		if (el.attr("data-width") && el.attr("data-height")) {
+			newEl.attr("width", newEl.attr("data-width")).attr("height", newEl.attr("data-height"));
+		}
+
+		el.replaceWith(newEl);
+	});
+
+	function copyAttributes(from, to) {
+
+		var attributes = from.get(0).attributes;
+
+		for (var i = 0, length = attributes.length; i < length; i++) {
+			to.attr(attributes[i].name, attributes[i].value);
+		}
+	}
+});

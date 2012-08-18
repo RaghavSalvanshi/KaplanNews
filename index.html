@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Husqvarna Construction Products - Home</title>
+		<link rel="stylesheet" href='http://cdn.m.husqvarnacp.com/res.axd/commonhqCss/944206565/common.css' />
+		<script>
+			var addToHomeConfig = {
+						message: 'Install this web app on your %device: tap %icon and then <strong>Add to Home Screen</strong>.',
+				animationIn: 'fade',
+				expire: 1440,
+				lifespan: 60000,
+				startDelay: 500,
+				touchIcon: true
+			};
+		</script>
+		<script src='http://cdn.m.husqvarnacp.com/res.axd/commonjs/505397753/mobile.js'></script>
+		<link rel="shortcut icon" href='/App_Themes/hq/favicon.ico' />
+				<script>
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-27274962-1']);
+			_gaq.push(['_setCookiePath', '/us/']);
+			_gaq.push(['_trackPageview']);
+			(function () {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+
+<meta name="x-facet" content="pagetype_s=gwspage&amp;navkey_s=n5977" />		
+		<meta name="format-detection" content="telephone=no">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href='http://cdn.m.husqvarnacp.com/App_Themes/hq/icon/apple-touch-icon-114x114-precomposed$230d95.png'>
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href='http://cdn.m.husqvarnacp.com/App_Themes/hq/icon/apple-touch-icon-72x72-precomposed$230d95.png'>
+		<link rel="apple-touch-icon-precomposed" href='http://cdn.m.husqvarnacp.com/App_Themes/hq/icon/apple-touch-icon-57x57-precomposed$230d95.png'>
+	</head>
+	<body>
+		<div id="page" data-role="page" data-theme="m" class="">
+			
+
+<script id="carousel-item-template" type="text/x-jquery-tmpl">
+    <a class="ui-shadow ui-link-inherit carousel-item" href="${url}">
+        {{if hasSize }}
+            <img src="${imageFileNormal}" data-2x-url="${imageFileHighResolution}" alt="" class="image retina" width="${imageFileWidth}" height="${imageFileHeight}" />
+        {{else}}
+            <img src="${imageFileNormal}" data-2x-url="${imageFileHighResolution}" alt="" class="image retina" style="max-width: ${imageFileWidth}px; max-height: ${imageFileHeight}px;" />
+        {{/if}}
+		<div class="caption">
+			${caption}
+		</div>
+	</a>
+</script>
+
+<div data-role="header" data-theme="m"><h1><img src="http://cdn.m.husqvarnacp.com/App_Themes/hq/logo$211f3f.png" data-2x-url="http://cdn.m.husqvarnacp.com/App_Themes/hq/logo@2x$211f3f.png" alt="" class="retina logo" /></h1></div>
+<div id="start-page" data-role="content" data-theme="m">
+	
+			
+			
+			
+	
+
+	
+
+	
+
+
+	<div id="carousel-container">
+		<div id="start-page-carousel"></div>
+		<ol id="indicators"></ol>
+		<a id="prev"></a>
+		<a id="next"></a>
+	</div>
+	<div>
+
+<ul data-role="listview" data-inset="true" data-theme="m">
+		<li>
+			<a href="/us/products/" class="">Products</a>
+		</li>	
+		<li>
+			<a href="/us/diamond-tools-guide/" class="">Tool guide</a>
+		</li>	
+		<li>
+			<a href="/us/dealer-locator/" class="">Dealer locator</a>
+		</li>	
+		<li>
+			<a href="/us/search-documentation/" class="">Find manuals</a>
+		</li>	
+		<li>
+			<a href="http://corporate.husqvarna.com/m/" class="">Husqvarna Group</a>
+		</li>	
+</ul>	</div>
+</div>
+
+
+			
+	<div data-role="footer" data-theme="m">
+
+
+	<form method="get" action="/us/search-website/" id="site-search-form">
+		<div class="search-wrapper ui-btn-icon-right">
+			<input type="search" placeholder="Enter search term" name="q" id="q" />
+			<span class="search-button-glass ui-icon ui-icon-search"></span>
+		</div>
+	</form>
+
+
+<div data-role="controlgroup" data-type="horizontal" data-theme="m">
+		<a href="/us/" data-role="button">Home</a>
+		<a href="/us/follow-us/" data-role="button">Follow us</a>
+		<a href="/us/legal/" data-role="button">Legal</a>
+</div>
+
+
+<ul id="footer-links">
+			 <li class="change-language usa">	<a href="http://m.husqvarnacp.com/int/change-language/">Change market</a>
+</li>
+			 <li class="full-website">	<a href="http://www.husqvarna.com/us/construction/home/?frommobile=1">Full website</a>
+</li>
+</ul>
+<p class="copyright">Copyright &copy; 2012 Husqvarna AB (publ). 
+All rights reserved.</p></div>
+
+		</div>
+
+		<script>
+			var startPageCarousel = new Carousel();
+
+			$(function () {
+				startPageCarousel.orderItems = function (items) {
+					items.splice(0, 0, items.pop());
+				};
+				startPageCarousel.init($('#start-page-carousel'), 240, 20, 1, 0.3);
+				startPageCarousel.render();
+				$(window).bind('resize', startPageCarousel.arrange);
+				$('#carousel-container').bind('swipeleft', startPageCarousel.slideNext);
+				$('#carousel-container').bind('swiperight', startPageCarousel.slidePrev);
+			});	
+		</script>		<script>startPageCarousel.addItem({ caption: "Construction products", url: "/us/products/", imageFileNormal: "http://cdn.m.husqvarnacp.com/fimage.axd/default/240x186/7c500950/png/files/common/mobile_sites/hcp-products@2x.png", imageFileHighResolution: "http://cdn.m.husqvarnacp.com/fimage.axd/default/480x372/5e28aef7/png/files/common/mobile_sites/hcp-products@2x.png", imageFileWidth: 240, imageFileHeight: 186, hasSize: true });</script>		<script>startPageCarousel.addItem({ caption: "Diamond tool guide", url: "/us/diamond-tools-guide/", imageFileNormal: "http://cdn.m.husqvarnacp.com/fimage.axd/default/240x186/5f91882c/png/files/common/mobile_sites/hcp-toolguide@2x.png", imageFileHighResolution: "http://cdn.m.husqvarnacp.com/fimage.axd/default/480x372/2473255f/png/files/common/mobile_sites/hcp-toolguide@2x.png", imageFileWidth: 240, imageFileHeight: 186, hasSize: true });</script>		<script>startPageCarousel.addItem({ caption: "Locate your dealer", url: "/us/dealer-locator/", imageFileNormal: "http://cdn.m.husqvarnacp.com/fimage.axd/default/240x186/6fdeb07f/png/files/common/mobile_sites/hq-dealer@2x.png", imageFileHighResolution: "http://cdn.m.husqvarnacp.com/fimage.axd/default/480x372/7cec4126/png/files/common/mobile_sites/hq-dealer@2x.png", imageFileWidth: 240, imageFileHeight: 186, hasSize: true });</script>		<script src='http://cdn.m.husqvarnacp.com/Scripts/image-handling$210f08.js'></script>
+	</body>
+</html>
